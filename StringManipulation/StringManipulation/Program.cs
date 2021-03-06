@@ -18,6 +18,34 @@ namespace StringManipulation
             Console.WriteLine("");
             Console.WriteLine("What would you like to replace it with>>");
             replace = Console.ReadLine();
+
+            bool search = statement.Contains(wordlook, System.StringComparison.CurrentCultureIgnoreCase);
+
+            if (search == true)
+            {
+                var replacement = statement.Replace(wordlook, replace);
+                Console.WriteLine("");
+                Console.WriteLine(replacement);
+            }
+
+            if (search == false)
+            {
+                Console.WriteLine($"Sorry, I could not find your word {wordlook}");
+
+                int length;
+                string reverse ="";
+
+                length = wordlook.Length - 1;
+
+                while (length >= 0)
+                {
+                    reverse = reverse + wordlook[length];
+                    length--;
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine($"The reverse of your word is {reverse}");
+            }
         }
     }
 }
