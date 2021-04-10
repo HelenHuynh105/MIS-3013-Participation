@@ -12,19 +12,19 @@ namespace Speak
             Console.WriteLine($"{answer} makes this sound {AnimalSound(answer)}");
         }
 
-        static string AnimalSound(string answer)
+        static string AnimalSound(string animal)
         {
             string sound = "";
 
-            if (answer.ToLower() == "Duck")
+            if (animal.ToLower() == "duck")
             {
                 sound = "Quack";
             }
-            if (answer.ToLower() == "Pig")
+            else if (animal.ToLower() == "pig")
             {
                 sound = "Oink";
             }
-            if (answer.ToLower() == "Cow")
+            else if (animal.ToLower() == "cow")
             {
                 sound = "Moo";
             }
