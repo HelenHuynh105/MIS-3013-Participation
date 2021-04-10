@@ -61,7 +61,7 @@ namespace FunctionCalculator
                 {
                     Console.WriteLine($"Your answer is: {Divide(val, val2)}!");
                 }
-                else if (answer.ToLower == "stop")
+                else
                 {
                     Environment.Exit(-1);
                 }
