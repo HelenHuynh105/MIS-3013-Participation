@@ -32,7 +32,7 @@ namespace FunctionCalculator
                 Console.WriteLine($"Your answer is: {Divide(val, val2)}!");
             }
 
-            Console.WriteLine("Do you want a new calculation or use the previous answer and continue?");
+            Console.WriteLine("Do you want a new calculation,use the previous answer and continue, or stop?");
             string NewOrContinue = Console.ReadLine();
 
             if (NewOrContinue.ToLower() == "new")
@@ -57,9 +57,13 @@ namespace FunctionCalculator
                 {
                     Console.WriteLine($"Your answer is: {Multiply(val, val2)}!");
                 }
-                else
+                else if(answer.ToLower() == "divide")
                 {
                     Console.WriteLine($"Your answer is: {Divide(val, val2)}!");
+                }
+                else if (answer.ToLower == "stop")
+                {
+                    Environment.Exit(-1);
                 }
             }
 
